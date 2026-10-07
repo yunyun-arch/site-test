@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>松鼠的蘋果籃子</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">森林收成日</p>
+        <h1>松鼠的蘋果籃子</h1>
+      </div>
+      <div class="stats" aria-label="遊戲資訊">
+        <div class="stat-card"><span>分數</span><strong id="score">0</strong></div>
+        <div class="stat-card hearts"><span>生命</span><strong id="hearts">❤️❤️❤️</strong></div>
+      </div>
+    </header>
+
+    <section class="game-card">
+      <canvas id="gameCanvas" aria-label="松鼠接蘋果遊戲"></canvas>
+      <div class="overlay" id="startOverlay">
+        <div class="overlay-card">
+          <div class="mascot">🐿️</div>
+          <h2>準備接果果！</h2>
+          <p>用 ← → 或 A / D 移動籃子<br />小心帶刺栗子喔！</p>
+          <button id="startButton">開始遊戲</button>
+        </div>
+      </div>
+      <div class="overlay hidden" id="gameOverOverlay">
+        <div class="overlay-card">
+          <div class="mascot">🌰</div>
+          <h2>遊戲結束</h2>
+          <p>這次收集了 <strong id="finalScore">0</strong> 顆蘋果！</p>
+          <button id="restartButton">再玩一次</button>
+        </div>
+      </div>
+    </section>
+
+    <p class="hint">拖曳籃子也可以移動｜接到蘋果 +1 分｜漏接蘋果或接到栗子 -1 顆心</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
